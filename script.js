@@ -62,3 +62,11 @@ window.addEventListener('resize', handleResize);
 // Initialize
 handleClickEvents();
 setActiveTab(tabs[0]);
+
+const projects=document.getElementById('tab-projects')
+const btn=document.getElementById('projectBtn').addEventListener('click',()=>{
+  projects.scrollIntoView({
+    behavior:'smooth'
+  })
+})
+
