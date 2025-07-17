@@ -1,7 +1,7 @@
-const tabs = document.querySelectorAll('.et-hero-tab');
-const slider = document.getElementById('tabSlider');
-const container = document.querySelector('.et-hero-tabs-container');
-const sections = document.querySelectorAll('.et-slide');
+const tabs = document.querySelectorAll(".et-hero-tab");
+const slider = document.getElementById("tabSlider");
+const container = document.querySelector(".et-hero-tabs-container");
+const sections = document.querySelectorAll(".et-slide");
 const tabHeight = 70;
 
 function moveSliderToTab(tab) {
@@ -10,20 +10,20 @@ function moveSliderToTab(tab) {
 }
 
 function setActiveTab(tab) {
-  tabs.forEach(t => t.classList.remove('active'));
-  tab.classList.add('active');
+  tabs.forEach((t) => t.classList.remove("active"));
+  tab.classList.add("active");
   moveSliderToTab(tab);
 }
 
 function handleClickEvents() {
-  tabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", (e) => {
       e.preventDefault();
-      const targetId = tab.getAttribute('href').substring(1);
+      const targetId = tab.getAttribute("href").substring(1);
       const target = document.getElementById(targetId);
       window.scrollTo({
         top: target.offsetTop - tabHeight + 1,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
       setActiveTab(tab);
     });
@@ -32,13 +32,13 @@ function handleClickEvents() {
 
 function handleScrollEvents() {
   const scrollY = window.scrollY;
-  
+
   // Make navbar sticky
   const tabsOffset = container.offsetTop + container.offsetHeight - tabHeight;
   if (scrollY > tabsOffset) {
-    container.classList.add('et-hero-tabs-container--top');
+    container.classList.add("et-hero-tabs-container--top");
   } else {
-    container.classList.remove('et-hero-tabs-container--top');
+    container.classList.remove("et-hero-tabs-container--top");
   }
 
   // Find current section
@@ -52,21 +52,22 @@ function handleScrollEvents() {
 }
 
 function handleResize() {
-  const active = document.querySelector('.et-hero-tab.active');
+  const active = document.querySelector(".et-hero-tab.active");
   if (active) moveSliderToTab(active);
 }
 
-window.addEventListener('scroll', handleScrollEvents);
-window.addEventListener('resize', handleResize);
+window.addEventListener("scroll", handleScrollEvents);
+window.addEventListener("resize", handleResize);
 
 // Initialize
 handleClickEvents();
 setActiveTab(tabs[0]);
 
-const projects=document.getElementById('tab-projects')
-const btn=document.getElementById('projectBtn').addEventListener('click',()=>{
-  projects.scrollIntoView({
-    behavior:'smooth'
-  })
-})
-
+const projects = document.getElementById("tab-projects");
+const btn = document
+  .getElementById("projectBtn")
+  .addEventListener("click", () => {
+    projects.scrollIntoView({
+      behavior: "smooth",
+    });
+  });
