@@ -248,6 +248,149 @@ ul {
   margin-bottom: 30px;
 }
 /* Responsive adjustments */
+@media screen and (max-width:755px) and (min-width:544px) {
+
+  
+  .et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.et-hero-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+
+.et-hero-tabs,
+  .tab-home,
+  .et-hero-tabs-container {
+
+    flex-direction: column;
+  }
+
+  .et-hero-tab {
+  
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    background: white;
+  }
+
+  #box {
+    flex-direction: column;
+  }
+
+  .styling {
+    flex-direction: column !important;
+  }
+
+  .liveBtn {
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .about {
+    margin: 0 1rem;
+  }
+
+  #tab-home > div > h1 {
+    font-size: 2rem !important;
+  }
+
+  #tab-home > div > p {
+    font-size: 1.1rem;
+  }
+
+  #tab-about {
+    margin: 25rem 0;
+  }
+
+  #tab-projects {
+    margin: 5rem 0;
+  }
+
+  #tab-footer > .div1 {
+    flex-direction: column;
+    gap: 20px;}
+     .et-hero-tab-slider {
+    display: none;
+  }
+}
+@media screen and (max-width:543px) and (min-width:320px) {
+
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.et-hero-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+
+.et-hero-tabs,
+  .tab-home,
+  .et-hero-tabs-container {
+
+    flex-direction: column;
+  }
+
+  .et-hero-tab {
+  
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    background: white;
+  }
+
+  #box {
+    flex-direction: column;
+  }
+
+  .styling {
+    flex-direction: column !important;
+  }
+
+  .liveBtn {
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .about {
+    margin: 0 1rem;
+  }
+
+  #tab-home > div > h1 {
+    font-size: 2rem !important;
+  }
+
+  #tab-home > div > p {
+    font-size: 1.1rem;
+  }
+
+  #tab-about {
+    margin: 30rem 0;
+  }
+
+  #tab-projects {
+    margin: 5rem 0;
+  }
+
+  #tab-footer > .div1 {
+    flex-direction: column;
+    gap: 20px;}
+     .et-hero-tab-slider {
+    display: none;
+  }
+}
 @media (min-width: 800px) {
   .et-hero-tabs h1,
   .et-slide h1 {
